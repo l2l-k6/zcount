@@ -1,3 +1,5 @@
+CFLAGS = -O2 -Wall
+
 .PHONY: all clean install uninstall
 
 all: zcount
@@ -10,8 +12,8 @@ clean:
 uninstall:
 
 zcount: zcount.o
-	$(CC) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $<
 
 zcount.o: zcount.c
-	$(CC) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
