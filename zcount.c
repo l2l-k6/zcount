@@ -1,7 +1,7 @@
 //
 // zcount.c: count the number of zero-bytes in files or stdin
 //
-// Copyright (C) 2008 Leonid Chaichenets
+// Copyright (C) 2012 Leonid Chaichenets
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -52,7 +52,7 @@ const char *argp_program_version = "zcount 1.0";
 
 // contact address:
 const char * argp_program_bug_address =
-	"Leonid Chaichenets <leo.chaichenets@web.de>";
+	"Leonid Chaichenets <leonid.chaichenets@googlemail.com>";
 
 // program description:
 const char doc[] =
