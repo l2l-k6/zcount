@@ -1,15 +1,18 @@
 CFLAGS = -O2 -Wall
+PREFIX = /usr/local
+BINDIR = $(PREFIX)/bin
 
-.PHONY: all clean install uninstall
+INSTALL = /usr/bin/install
+
+.PHONY: all clean install
 
 all: zcount
 
-install:
+install: all
+	$(INSTALL) --owner=root --group=root --mode=0755 zcount $(BINDIR)
 
 clean:
 	$(RM) -f *~ *.o zcount
-
-uninstall:
 
 zcount: zcount.o
 	$(CC) $(CFLAGS) -o $@ $<
